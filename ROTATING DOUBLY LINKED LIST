@@ -1,0 +1,26 @@
+struct node*update(struct node*start,int p)
+{
+    //Add your code here
+    int count=0;
+    if(p==0)
+    {
+        return start;
+    }
+    node*ptr=start;
+    while(count<p-1 && ptr!=NULL)
+    {
+        ptr=ptr->next;
+        count++;
+    }
+    node*pnode=ptr;
+    while(ptr->next!=NULL)
+    {
+        ptr=ptr->next;
+    }
+    ptr->next=start;
+    start->prev=ptr;
+    start=pnode->next;
+    start->prev=NULL;
+    pnode->next=NULL;
+    return start;
+}
