@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<long long>nge(vector<long long> a,int n)
+vector<long long>nse(vector<long long> a,int n)
 {  vector<long long>v;
 stack<long long>s;
    for(int i=0;i<n;i++)
@@ -44,7 +44,7 @@ int main()
 	{
 		cin>>a[i];
 	}
-	vector<long long> res=nge(a,n);
+	vector<long long> res=nse(a,n);
 	cout<<"next smaller element to left"<<endl;
 	for(int i=0; i < res.size(); i++)
 std::cout << res.at(i) << ' ';
